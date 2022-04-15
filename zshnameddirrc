@@ -1,0 +1,11 @@
+hash -d conf=/home/estefano/.config
+hash -d s=/home/estefano/.local/bin/
+hash -d soft=/home/estefano/.local/src/
+hash -d doc=~/documents
+hash -d down=~/Downloads
+hash -d oldhome=~/documents/oldhome/estefano
+hash -d pics=~/documents/Pictures
+hash -d edu=~/documents/edu
+hash -d lsrc=/usr/local/src/
+hash -d dwm=/usr/local/src/dwm_old/
+hash -d st=/usr/local/src/luke_st/
