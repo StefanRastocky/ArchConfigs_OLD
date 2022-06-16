@@ -9,3 +9,6 @@ hash -d edu=~/documents/edu
 hash -d lsrc=/usr/local/src/
 hash -d dwm=/usr/local/src/dwm_old/
 hash -d st=/usr/local/src/luke_st/
+
+hash -d mw=~/documents/edu/microwave/
+hash -d text=~/documents/library/TEXTBOOKS

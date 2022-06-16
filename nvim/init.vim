@@ -14,34 +14,34 @@ nnoremap <leader>sc :source ~/.config/nvim/init.vim<cr>
 " SOME PLUG STUFF
 call plug#begin('~/.config/nvim/autoload/plugged')
 "	Plug 'jiangmiao/auto-pairs'
-"	Plug 'tpope/vim-commentary'
-"	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-surround'
 "	Plug 'christoomey/vim-system-copy'
-"       Plug 'sheerun/vim-polyglot'
+  Plug 'sheerun/vim-polyglot'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/vim-easy-align'
 "	Plug 'PotatoesMaster/i3-vim-syntax'
 "	Plug 'jreybert/vimagit'
 "	Plug 'LukeSmithxyz/vimling'
 "	Plug 'vimwiki/vimwiki'
-"	Plug 'terryma/vim-multiple-cursors'
+	Plug 'terryma/vim-multiple-cursors'
 	Plug 'vim-airline/vim-airline'
-"	Plug 'tomasiser/vim-code-dark'
+	Plug 'tomasiser/vim-code-dark'
 "	Plug 'jalvesaq/Nvim-R'
-"       Plug 'neoclide/coc.nvim', {'branch': 'release'} "code completion
-"       Plug 'kevinoid/vim-jsonc'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} "code completion
+  Plug 'kevinoid/vim-jsonc'
 	Plug 'ctrlpvim/ctrlp.vim' "fuzzyfinds files
 	Plug 'scrooloose/nerdtree'
-"	"Plug 'tsony-tsonev/nerdtree-git-plugin'
-"	"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"	Plug 'tsony-tsonev/nerdtree-git-plugin'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ryanoasis/vim-devicons'
 "	Plug 'lervag/vimtex'
-"       Plug 'xolox/vim-colorscheme-switcher'
-"	Plug 'xolox/vim-misc'
-"	Plug 'Taverius/vim-colorscheme-manager'
-"       Plug 'scrooloose/nerdcommenter'
-"       Plug 'HerringthnDarkholme/yats.vim'
-"       Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'xolox/vim-colorscheme-switcher'
+	Plug 'xolox/vim-misc'
+	Plug 'Taverius/vim-colorscheme-manager'
+  Plug 'scrooloose/nerdcommenter'
+" Plug 'HerringthnDarkholme/yats.vim'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 " /////////////////////////////////////////////////////////////////?/////
@@ -64,22 +64,22 @@ call plug#end()
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
-	"set termguicolors
+	set termguicolors
 	set cursorline
 	set cmdheight=2 "give more space for messages
 	set updatetime=1 "shorter lag on update
 	"set modifiable
 	"set path+=**
-	"let g:airline_theme = 'codedark'
-	"let g:airline#extensions#ine#enabled = 1
+	let g:airline_theme = 'codedark'
+	let g:airline#extensions#ine#enabled = 1
 " SET Y TO YANK UNTIL END OF LINE
 	nnoremap Y y$
 " SCROLL BY SCREEN LINES RATHER THAN TEXT LINES AND VICE VERSA
-	"map j gj
-	"map k gk
+	map j gj
+	map k gk
 " ENABLE A CENTRE-OF-SCREEN SCROLLING WITH Shift+(j/k)
-  nnoremap <C-J> jzz
-  nnoremap <C-K> kzz
+  	nnoremap <C-j> jzz
+  	nnoremap <C-k> kzz
 " ENABLE AUTOCOMPLETION
 	set wildmenu
 	set wildmode=longest:full,full
@@ -136,10 +136,10 @@ inoremap <silent><expr> <Tab>
 inoremap <silent><expr> <c-space> coc#refresh()
 " SOME NERDTREE SETTINGS
 	nmap <C-f> :NERDTreeToggle<CR>
-	let NERDTreeShowHidden=1
 	autocmd vimenter * NERDTree
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+	let NERDTreeShowHidden=0
 	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
 " vimtex - start server automatically
@@ -178,13 +178,13 @@ autocmd FileType html inoremap ;p <p></p><Enter><Enter><Esc>2ki
 autocmd FileType tex inoremap ;pkg \usepackage{}F{a
 
 " CHANGE CURSOR COLOR
-"let &t_SI = "\<Esc>]12;orange\x7"
-"let &t_EI = "\<Esc>]12;red\x7"
+let &t_SI = "\<Esc>]12;orange\x7"
+let &t_EI = "\<Esc>]12;red\x7"
 "did not work well
 
 " SET COLORSCHEME
-"colorscheme codedark
-"let g:airline_theme = 'codedark'
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 " outdated try to open pdf from name in vim
 "nnoremap <leader>p 0wy$:!zathura "<C-R>"<BS>" & disown<CR><CR> 
